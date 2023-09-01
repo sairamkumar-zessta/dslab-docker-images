@@ -41,11 +41,8 @@ RUN python3 -m pip install git+https://github.com/zessta/nbgrader.git && \
     jupyter serverextension enable --sys-prefix --py nbgrader  && \
     jupyter nbextension disable --sys-prefix course_list/main --section=tree && \
     jupyter serverextension disable --sys-prefix nbgrader.server_extensions.course_list && \
-    jupyter nbextension disable --sys-prefix formgrader/main --section=tree && \
-    jupyter serverextension disable --sys-prefix nbgrader.server_extensions.formgrader && \
     python3 -m pip install ngshare_exchange==0.5.1 && \
-    python3 -m pip install keras && \
-    python3 -m pip install scikit-learn && \
+    python3 -m pip install pandas && \
     python3 -m pip install psycopg2-binary && \
     python3 -m pip install pathlib && \
     python3 -m pip install keras && \
@@ -53,7 +50,7 @@ RUN python3 -m pip install git+https://github.com/zessta/nbgrader.git && \
     python3 -m pip install numpy && \
     python3 -m pip install matplotlib && \
     python3 -m pip install seaborn && \
-    python3 -m pip install nbgitpuller && \ 
+    python3 -m pip install nbgitpuller && \
     python3 -m pip install findspark && \
     python3 -m pip install statsmodels && \ 
     python3 -m pip install bokeh && \ 
@@ -62,7 +59,7 @@ RUN python3 -m pip install git+https://github.com/zessta/nbgrader.git && \
     python3 -m pip install tensorflow && \
     python3 -m pip install torch && \
     python -m pip install --upgrade pip && \
-    pip install jupyter_contrib_nbextensions==0.5.1      
+    pip install jupyter_contrib_nbextensions==0.5.1   
 
 COPY docker-common-files/snippets.json /opt/conda/lib/python3.7/site-packages/jupyter_contrib_nbextensions/nbextensions/snippets/snippets.json
 
