@@ -1,0 +1,1 @@
+docker build -f dockerfile-singleuser-learner-spark/Dockerfile -t learner:1 .
